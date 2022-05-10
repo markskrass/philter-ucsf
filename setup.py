@@ -6,12 +6,12 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name="philter_ucsf",
     version="1.0.0",
-    author="Beau Norgeot",
+    author="Beau Norgeot (modified by Mark Krass)",
     author_email="beaunorgeot@gmail.com",
     description="An open-source PHI-filtering software",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/BCHSI/philter-ucsf",
+    url="https://github.com/markskrass/philter-ucsf",
     packages=setuptools.find_packages(),
     include_package_data=True,
     classifiers=[
