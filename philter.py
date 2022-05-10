@@ -6,8 +6,7 @@ class Philter:
 
     def __init__(self) : 
 
-        self.root = "/Users/MarkKrass/Dropbox (Stanford Law School)/pile/philter/"
-        self.patterns = json.loads(open(root + "configs/philter_delta_phi_tags.json", "r").read())
+        self.patterns = json.loads(open("configs/philter_delta_phi_tags.json", "r").read())
         self.coordinate_maps = []
         self.pos_tags = {}
         self.cleaned = {}
@@ -22,7 +21,7 @@ class Philter:
         # init patterns
         self.init_patterns(self.patterns)
 
-    def init_patterns(self, patterns, root = "/Users/MarkKrass/Dropbox (Stanford Law School)/pile/philter/"):
+    def init_patterns(self, patterns):
         """ given our input pattern config will load our sets and pre-compile our regex"""
 
         known_pattern_types = set(["regex", "set", "regex_context","stanford_ner", "pos_matcher", "match_all"])
@@ -31,11 +30,6 @@ class Philter:
         set_filetypes = set(["pkl", "json"])
         regex_filetypes = set(["txt"])
         reserved_list = set(["data", "coordinate_map"])
-
-        # add root to all filepaths
-        for i,p in enumerate(patterns):
-            if "filepath" in p:
-                patterns[i]['filepath'] = root + patterns[i]['filepath']
 
         #first check that data is formatted, can be loaded etc. 
         for i,pattern in enumerate(patterns):
