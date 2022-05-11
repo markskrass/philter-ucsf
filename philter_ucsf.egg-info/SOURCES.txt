@@ -1,3 +1,4 @@
+LICENSE
 MANIFEST.in
 README.md
 setup.py
@@ -8,6 +9,7 @@ philter_ucsf/eval_scrubber_i2b2.py
 philter_ucsf/eval_scrubber_ucsf.py
 philter_ucsf/improve_i2b2_notes.py
 philter_ucsf/philter.py
+philter_ucsf/setup.py
 philter_ucsf.egg-info/PKG-INFO
 philter_ucsf.egg-info/SOURCES.txt
 philter_ucsf.egg-info/dependency_links.txt
